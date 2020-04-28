@@ -26,6 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
       img: "images/ice-ceam.png",
     },
     {
+      name: "hotdog",
+      img: "images/hotdog.png",
+    },
+    {
+      name: "hotdog",
+      img: "images/hotdog.png",
+    },
+    {
       name: "milkshake",
       img: "images/milkshake.png",
     },
@@ -45,4 +53,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const grid = document.querySelector(".grid");
   // create your board
+
+  function createBoard() {
+    for (let i = 0; i < cardArray.length; i++) {
+      var card = document.createElement("img");
+      card.setAttribute("src", "images/blank.png");
+      card.setAttribute("data-id", i);
+      //card.addEventListener("click", flipCard);
+      grid.appendChild(card);
+    }
+  }
+
+  // check for matches
+
+  // flip your card
+  function flipCard() {}
+
+  createBoard();
 });
